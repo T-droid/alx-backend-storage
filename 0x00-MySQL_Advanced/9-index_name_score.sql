@@ -1,5 +1,3 @@
--- creates an index with two columns
-ALTER TABLE names
-ADD COLUMN CHAR(1) GENERATED ALWAYS AS (LEFT(name, 1)) STORED;
-
-CREATE INDEX idx_name_first ON names (first_letter, score);
+-- Creates an index idx_name_first_score on the table
+CREATE INDEX idx_name_first_score
+ON names(name(1), score);
