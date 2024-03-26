@@ -1,0 +1,2 @@
+// lists documents starting by "name"
+db.school.find({"name": { "$regex": "Holberton"}})
