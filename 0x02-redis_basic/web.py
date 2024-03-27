@@ -32,3 +32,4 @@ def get_page(url: str) -> str:
     """
     response = requests.get(url)
     return response.text
+    
